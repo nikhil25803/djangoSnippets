@@ -1,17 +1,38 @@
-{% extends 'card/navbar.html' %}
-
-
-{% block content %}
-
+{% extends 'card/navbar.html' %} {% block content %}
 
 <h1>Fill the form</h1>
 <form class="row gy-2 gx-3 align-items-center" method="POST">
-  {% csrf_token %}
-  {{form.as_p}}
+  {% csrf_token %} {{form.as_p}}
 
-    
-    <input type="submit" class="btn btn-sucess" value="Add">
+  <input type="submit" class="btn btn-sucess" value="Add" />
+</form>
+<hr>
+<hr>
+<h4>Added Profiles</h4>
+ 
+
+{% if stud %}
+{% for st in stud %}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{st.first_name}}</h5>
+    <p class="card-text">Hi Everyone, my name is {{st.first_name}} {{st.last_name}}..</p>
+    <p class="card-text">My Email Id is {{st.email}}</p>
+    <p class="card-text">My twitter username is {{st.username}}</p>
+    <p class="card-text">and my name you will find there is {{st.twitter_name}}</p>
+
+<form action="{% url 'deletedata' st.id %}" method="post">
+  {% csrf_token %}
+    <input type="submit" value="Delete">
   </form>
-  <hr>
+
+    <a href="#" class="btn btn-primary ">Update Profile</a>
+  </div>
+</div>
+{% endfor %} 
+{% else %}
+<h2>No content</h2>
+{% endif %}
+
 
 {% endblock %}

@@ -1,7 +1,7 @@
 import email
 import imp
 from unicodedata import name
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect
 from django.http import HttpResponse
 from .forms import register
 from .models import User
@@ -19,12 +19,21 @@ def home(request):
             # reg = User(fir=fn, email=em)
             fm.save()
             fm = register()
+            stud = User.objects.all()
+            
     
     else:
         fm = register()
+        
+        
 
-    return render(request, 'card/home.html', {'form':fm})
+    return render(request, 'card/home.html', {'form':fm, 'stud':stud})
 
+def delete(request, id):
+    if request.method == 'POST':
+        pi = User.objects.get(pk=id)
+        pi.delete()
+        return HttpResponseRedirect('/')
 
 def cards(request):
     return render(request, 'card/cards.html')
