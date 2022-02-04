@@ -39,9 +39,9 @@ class Project(models.Model):
 
     college = models.CharField(max_length=100)
 
-    year = models.PositiveIntegerField()
+    # year = models.PositiveIntegerField()
 
-    dou = models.DateField(default=timezone.now)
+    #dou = models.DateField(default=timezone.now)
 
     prname = models.CharField(max_length=50)
 

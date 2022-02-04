@@ -8,4 +8,4 @@ from  .models import Project
 
 @admin.register(Project)
 class ProjectModelAdmin(admin.ModelAdmin):
-    list_display = ['id','name','college','year','prname','prdes','stack','lang','primg', 'repo', 'live', 'docs']
+    list_display = ['id','name','college','prname','prdes','stack','lang','primg', 'repo', 'live', 'docs']

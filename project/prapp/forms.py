@@ -22,14 +22,14 @@ LANGUAGES = [
 ]
 
 class ProjectForm(forms.ModelForm):
-    
+
     lan_used = forms.MultipleChoiceField(label='Languages Used', choices=LANGUAGES, widget=forms.CheckboxSelectMultiple)
-    
+
     class Meta:
         model = Project
         fields = ['name','college','prname','prdes','stack','primg', 'repo', 'live', 'docs']
 
-        labels = {'name':'Name of the Studets','college':'College Name', 'year':'Year', 'prname':'Project Name', 'prdes':'Project Description', 'stack':'Tech Stack Used', 'primg':'Project Image', 'repo':'GitHub Repo Link','live':'Live Link', 'docs':'Documentation'}
+        labels = {'name':'Name of the Studets','college':'College Name', 'prname':'Project Name', 'prdes':'Project Description', 'stack':'Tech Stack Used', 'primg':'Project Image', 'repo':'GitHub Repo Link','live':'Live Link', 'docs':'Documentation'}
 
         widgets={
             'name':forms.TextInput(attrs={'class':'form-control'}),
