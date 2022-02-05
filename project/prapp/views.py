@@ -4,15 +4,19 @@ from django.shortcuts import render
 from .forms import ProjectForm
 from .models import Project
 from django.views import View
+# from django.views.decorators.csrf import csrf_protect
 
+# @csrf_protect
 class HomeView(View):
     def get(self, request):
         form = ProjectForm()
-        return render(request, 'prapp/home.html', {'form':form})
+        #users = ProjectForm.objects.all()
+        return render(request, 'prapp/home.html',{'form':form})
 
     def post(self, request):
         form = ProjectForm(request.POST, request.FILES)
 
         if form.is_valid():
             form.save()
-            return render(request, 'prapp/home.html', {'form':form})
+            form = ProjectForm()
+            return render(request, 'prapp/home.html',{'form':form})
