@@ -21,9 +21,11 @@ def home(request):
             fm = register()
             stud = User.objects.all()
             
+            
     
     else:
         fm = register()
+        
         
         
 
