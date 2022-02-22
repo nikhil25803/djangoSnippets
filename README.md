@@ -6,55 +6,55 @@
 
 # DJango Checklist :
 
-- ## Installation and setup
+- ### Installation and setup
 
-- ## Create Project
+- ### Create Project
 
-- ## Local host run
+- ### Local host run
 
-- ## Models
+- ### Models
 
-- ## Views
+- ### Views
 
-- ## Templates
+- ### Templates
 
-- ## Layout
+- ### Layout
 
-- ## Static Files
+- ### Static Files
 
-- ## Admin Panel Interface
+- ### Admin Panel Interface
 
-- ## Databse
+- ### Databse
 
-- ## URL Config
+- ### URL Config
 
-- ## Redirect method
+- ### Redirect method
 
-- ## Cookies Handling
+- ### Cookies Handling
 
-- ## Caching
+- ### Caching
 
-- ## Emails using Django
+- ### Emails using Django
 
-- ## Form model
+- ### Form model
 
-- ## Files Upload and store
+- ### Files Upload and store
 
-- ## CRUD
+- ### CRUD
 
-- ## ORM
+- ### ORM
 
-- ## CMS
+- ### CMS
 
-- ## Request and Rresponse
+- ### Request and Rresponse
 
-- ## Rest Framework
+- ### Rest Framework
 
-- ## Logging
+- ### Logging
 
-- ## Ajax
+- ### Ajax
 
-- ## Deployment
+- ### Deployment
 
 
 # Advance Django Concepts
