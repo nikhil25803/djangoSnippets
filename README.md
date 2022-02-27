@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Django Guide
 
 > Django is a widely-used Python web application framework with functionality for building web applications should come with the framework instead of as separate libraries.
@@ -73,3 +74,7 @@
 - ### Building APIs (e.g DRF)
 - ### Integrating with frontends (React, Vue, etc.)
 - ### Task queuing (Celery, Django-Q, etc.)
+=======
+# Django_Docs
+Basic Django Setups and implementation
+>>>>>>> parent of 98baa11 (Readme Congfig)
