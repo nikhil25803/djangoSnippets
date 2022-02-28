@@ -4,18 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
     <title>Django Course</title>
 </head>
 <body>
-    <h1>Programming Books</h1>
+
+<section class="py-10">
+
+    <h1 class="text-center tect-4xl">Programming Books</h1>
+
+    <div class="grid grid-cols-4 gap-4 mt-10">
 
     {% for book in books %}
 
+    <div class="">
+
     <h5>Name: {{ book.title }}</h5>
-    <p>Page Count: {{book.pageCount}}</p>
+    
     <img src="{{book.thumbnailUrl}}" alt="">
 
+    </div>
+
     {% endfor %}
+
+    </div>
+
+</section>
 
 </body>
 </html>
