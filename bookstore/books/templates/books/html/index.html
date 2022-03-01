@@ -18,7 +18,7 @@
 
         {% for book in books %}
 
-        <a href="/book/{{book.id}}" target="blank">
+        <a href="{% url 'book.show' book.id %}" target="blank">
 
         <div class="">
           <h5>Name: {{ book.title }}</h5>
