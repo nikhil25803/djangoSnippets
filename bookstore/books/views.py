@@ -1,5 +1,5 @@
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.http import Http404, HttpResponse
+from django.shortcuts import render, get_object_or_404
 import json
 from books.models import Book
 
@@ -13,7 +13,8 @@ def index(request):
 
 
 def show(request, id):
-    singleBook = Book.objects.get(pk=id)
+
+    singleBook = get_object_or_404(Book, pk=id)
 
     context = {'book':singleBook}
     return render(request, 'books/html/show.html', context)

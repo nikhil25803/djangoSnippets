@@ -14,3 +14,7 @@ class Book(models.Model):
     shortDescription = models.CharField(max_length=256, null=True)
     longDescription = models.TextField(null=True)
 
+    def __str__(self):
+        return self.title
+
+ 
