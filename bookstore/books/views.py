@@ -1,5 +1,5 @@
 from django.http import Http404, HttpResponse
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 import json
 from books.models import Book
 
@@ -18,3 +18,7 @@ def show(request, id):
 
     context = {'book':singleBook}
     return render(request, 'books/html/show.html', context)
+
+def review(request):
+
+    return redirect('/book')

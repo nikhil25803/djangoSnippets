@@ -9,7 +9,7 @@ STATE_CHOICE = (("Andhra Pradesh","Andhra Pradesh"),("Arunachal Pradesh ","Aruna
 
 class Resume(models.Model):
     name = models.CharField(max_length=50)
-    dob = models.DateField(auto_now=False,  auto_now_add=False)
+    age = models.IntegerField()
     gender = models.CharField(max_length=50)
     locality = models.CharField(max_length=100)
     city = models.CharField(max_length=100)

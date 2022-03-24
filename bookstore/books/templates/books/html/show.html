@@ -36,7 +36,7 @@
         Status : {{book.status}}
       </h5>
      
-      <form method="post">
+      <form method="post" action="{% url 'book.review' %}">
         {% csrf_token %}
         <textarea class="border rounded p-2 w-full" placeholder="Write Your Review Here" name="" id="" rows="5"></textarea>
 
