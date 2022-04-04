@@ -131,7 +131,9 @@ input {
 <div id="myDIV" class="header">
   <h2 style="margin:5px">Django To Do List App</h2>
   <form action="" method="POST">
+
     {% csrf_token %}
+    
     <input type="text" name="title" id="myInput" placeholder="Title...">
     <button type="submit" class="addBtn">Add</button>
   </form>
