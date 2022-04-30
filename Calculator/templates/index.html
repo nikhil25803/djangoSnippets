@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %} Homepage {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h2 class="bg-dark text-white rounded-pill text-center p-1">Hello World</h2>
+</div>
+
+<div class="container border border-2 p-2">
+    <form action="" method="post">
+        {% csrf_token %}
+
+        <label for="">Value 1</label>
+        <input type="text" name="num1" class="form-control">
+
+        <label for="">Options</label>
+        <select name="opr" id="" class="form-control">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+
+        <label for="">Value 2</label>
+        <input type="text" name="num2" class="form-control">
+
+        <input type="submit" class="btn btn-primary form-control mt-2">
+    </form>
+    <br>
+
+    <label for="" class="mt-2">Output</label>
+    <input type="text" name="" id="" class="form-control" value="{{ res }}">
+
+</div>
+
+{% endblock %}
