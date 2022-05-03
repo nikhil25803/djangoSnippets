@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %} Login Page {% endblock %}
+{% load socialaccount %}
+{% block content %}
+{% load static %}
+
+<div class="container">
+
+    <h5 class="bg-dark text-white text-center m-5 p-2 rounded-pill">Login With Username and Password</h5>
+
+        <form action="" method="post" style="width: 50%;">
+            <label for="">Username</label>
+            <input type="text" class="form-control" name="username">
+
+            <label for="">Password</label>
+            <input type="text" class="form-control" name="password">
+
+            <input type="submit" value="Submit" class="btn btn-success mt-2" name="" id="">
+        </form>
+             
+        <h5 class="bg-dark text-white text-center m-5 p-2 rounded-pill">Or Login with</h5>
+
+        <a href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?client_id=303059044948-ca1hgs8lgs17952h4lj8eudjcv74631n.apps.googleusercontent.com&redirect_uri=http%3A%2F%2F127.0.0.1%3A8000%2Faccounts%2Fgoogle%2Flogin%2Fcallback%2F&scope=email%20profile&response_type=code&state=JSdxIO1R1sAF&access_type=online&flowName=GeneralOAuthFlow" class="">
+            <img src="{% static 'search.png' %}" alt="google">
+        </a>
+
+    
+
+</div>
+
+{% endblock %}
