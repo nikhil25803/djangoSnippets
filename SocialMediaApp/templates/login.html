@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %} Login Page {% endblock title %}
+
+{% block content %}
+
+{% if messages %}
+{% for message in messages %}
+<div {% if message.tags %} class="alert alert-{{ message.tags }}" {% endif %} role="alert">
+    A simple success alert—check it out!
+</div>
+{% endfor %}
+{% endif %}
+
+<div class="container">
+    <h3 class="text-center border border-bottom-2 border-success rounded-pill">Login</h3>
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Username</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" name="username">
+
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+{% endblock content %}
