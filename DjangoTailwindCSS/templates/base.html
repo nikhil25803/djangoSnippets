@@ -1,0 +1,19 @@
+{% load tailwind_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% tailwind_css %}
+    <title>HELLO</title>
+</head>
+<body>
+    <h1 class="bg-red-600 px-4">Sample Text 2</h1>
+
+    {% block body %}
+
+    {% endblock body %}
+</body>
+</html>
