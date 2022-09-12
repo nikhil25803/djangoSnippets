@@ -9,5 +9,7 @@ urlpatterns = [
     # Endpoint for PUT method
     path('update/<int:pk>', views.update, name='update'),
     # Endpoint for PATCH method
-    path('modify/<int:pk>', views.modify, name='update-element')
+    path('modify/<int:pk>', views.modify, name='update-element'),
+    # Endpoint for GET method
+    path('listStudents/', views.listStudents, name='list-students')
 ]

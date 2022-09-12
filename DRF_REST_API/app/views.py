@@ -69,3 +69,14 @@ def modify(request, pk):
 
     else:
         return Response(status=status.HTTP_404_NOT_FOUND)
+
+
+@api_view(['GET'])
+def listStudents(request):
+
+    studentData = StudentModel.objects.all()
+
+    if studentData:
+        serialzedData = StudentSerialzers(studentData, many=True)
+        return Response(serialzedData.data)
+    return Response(status=status.HTTP_404_NOT_FOUND)
