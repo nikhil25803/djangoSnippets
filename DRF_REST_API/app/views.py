@@ -1,4 +1,5 @@
 
+from functools import partial
 from urllib import response
 from rest_framework import serializers
 from rest_framework import status
@@ -42,5 +43,29 @@ def addStudent(request):
     if studentData.is_valid():
         studentData.save()
         return Response(studentData.data)
+    else:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+@api_view(['PUT'])
+def update(request, pk):
+    student = StudentModel.objects.get(pk=pk)
+    studentData = StudentSerialzers(instance=student, data=request.data)
+
+    if studentData.is_valid():
+        studentData.save()
+        return Response(studentData.data)
+
+    else:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+@api_view(['PATCH'])
+def modify(request, pk):
+    student = StudentModel.objects.get(pk=pk)
+    studentData = StudentSerialzers(instance=student, data=request.data, partial=True)
+
+    if studentData.is_valid():
+        studentData.save()
+        return Response(studentData.data)
+
     else:
         return Response(status=status.HTTP_404_NOT_FOUND)
