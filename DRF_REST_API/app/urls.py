@@ -11,5 +11,7 @@ urlpatterns = [
     # Endpoint for PATCH method
     path('modify/<int:pk>', views.modify, name='update-element'),
     # Endpoint for GET method
-    path('listStudents/', views.listStudents, name='list-students')
+    path('listStudents/', views.listStudents, name='list-students'),
+    # Endpoint for DELETE method
+    path('remove/<int:pk>', views.removeStudent, name='remove-student')
 ]

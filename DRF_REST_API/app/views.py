@@ -80,3 +80,12 @@ def listStudents(request):
         serialzedData = StudentSerialzers(studentData, many=True)
         return Response(serialzedData.data)
     return Response(status=status.HTTP_404_NOT_FOUND)
+
+@api_view(['DELETE'])
+def removeStudent(request, pk):
+
+    student = StudentModel.objects.get(pk=pk)
+    student.delete()
+    return Response(status=status.HTTP_202_ACCEPTED)
+
+
